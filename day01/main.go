@@ -1,0 +1,13 @@
+package main
+
+import (
+	utils "aoc2019/util"
+	"fmt"
+)
+
+func main() {
+	values := utils.File("day01/day01.txt")
+
+	fmt.Printf("Solution part one: %d\n", CalculateModuleFuel(values))
+	fmt.Printf("Solution part two: %d\n", CalculateAllNonNegativeFuel(values))
+}
