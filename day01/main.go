@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	values := utils.File("day01/day01.txt")
+	values := utils.FileInt("day01/day01.txt")
 
 	fmt.Printf("Solution part one: %d\n", CalculateModuleFuel(values))
 	fmt.Printf("Solution part two: %d\n", CalculateAllNonNegativeFuel(values))

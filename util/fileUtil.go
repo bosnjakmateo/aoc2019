@@ -1,19 +1,18 @@
 package utils
 
 import (
-	"bufio"
-	"os"
-	"strconv"
+	"io/ioutil"
+	"strings"
 )
 
-func File(filePath string) (values []int) {
-	file, _ := os.Open(filePath)
-	scanner := bufio.NewScanner(file)
+func FileInt(filePath string) (values []int) {
+	return ToIntArray(FileString(filePath))
+}
 
-	for scanner.Scan() {
-		i, _ := strconv.Atoi(scanner.Text())
-		values = append(values, i)
-	}
+func FileString(filePath string) (values []string) {
+	bytes, _ := ioutil.ReadFile(filePath)
 
-	return values
+	str := string(bytes)
+
+	return strings.Split(str, ",")
 }

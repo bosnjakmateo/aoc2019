@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	values := utils.File("day02/day02.txt")
+	values := utils.FileInt("day02/day02.txt")
 	initialValues := append([]int{}, values...)
 
 	values[1] = 12
