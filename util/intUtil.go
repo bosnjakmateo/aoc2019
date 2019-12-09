@@ -29,3 +29,10 @@ func MinMax(a, b int) (min, max int) {
 
 	return min, max
 }
+
+func Min(a, b int) int {
+	if a <= b {
+		return a
+	}
+	return b
+}
