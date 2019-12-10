@@ -36,3 +36,7 @@ func Min(a, b int) int {
 	}
 	return b
 }
+
+func Len(n int) int {
+	return len(strconv.Itoa(n))
+}

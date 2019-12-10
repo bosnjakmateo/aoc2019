@@ -1,4 +1,4 @@
-package intcomp
+package intcodeComputer
 
 import "strconv"
 

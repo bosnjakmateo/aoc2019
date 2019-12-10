@@ -1,15 +1,17 @@
 package main
 
 import (
+	"aoc2019/intcodeComputer"
 	utils "aoc2019/util"
+	"fmt"
 )
 
 func main() {
 	instructions := utils.FileInt("day05/day05.txt", ",")
 
-	println("Solution part one:")
-	RunDiagnostics(append([]int{}, instructions...), 1)
+	result := intcodeComputer.RunDiagnosticsPrint(append([]int{}, instructions...), []int{1})
+	fmt.Printf("Solution part one: %v\n", result)
 
-	print("\nSolution part two: ")
-	RunDiagnostics(append([]int{}, instructions...), 5)
+	result = intcodeComputer.RunDiagnosticsPrint(append([]int{}, instructions...), []int{5})
+	fmt.Printf("Solution part two: %d\n", result[0])
 }

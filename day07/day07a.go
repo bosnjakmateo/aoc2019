@@ -1,7 +1,7 @@
 package main
 
 import (
-	intcomp "aoc2019/intcodeComputer"
+	"aoc2019/intcodeComputer"
 	utils "aoc2019/util"
 )
 
@@ -23,7 +23,7 @@ func runAmplifiers(values, phases []int) (thrusterSignal int) {
 	input := 0
 
 	for i := range phases {
-		input = intcomp.RunDiagnostics(append([]int{}, values...), phases[i], input)
+		input = intcodeComputer.RunDiagnosticsPrint(append([]int{}, values...), []int{phases[i], input})[0]
 	}
 
 	return input
